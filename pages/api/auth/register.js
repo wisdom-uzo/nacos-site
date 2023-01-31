@@ -23,7 +23,7 @@ export default withSession(async (req, res) => {
       const userCheck2 = await User.findOne({ matric_No: matric_No.toLowerCase() });
 
       if (userCheck || userCheck2) {
-        return res.status(httpStatus.BAD_REQUEST).json({ message: 'User already exists' });
+        return res.status(200).json({ message: 'User already exists', submitted: false });
       }
       // create user
      // const hashPassword = await bcrypt.hash(password, 10);
@@ -43,9 +43,12 @@ export default withSession(async (req, res) => {
       req.session.set('user', { id: user._id, email: user.email });
 
       await req.session.save();
-      return res.status(httpStatus.OK).end();
+      //return res.status(httpStatus.OK).end();
+      return res.status(200).json({ message: 'submitted', submitted: true });
     }
-    return res.status(httpStatus.BAD_REQUEST).end();
+    //return res.status(httpStatus.BAD_REQUEST).end();
+    return res.status(500).json({ message: 'failed', submitted: true });
+
   } catch (error) {
     console.log(error, error.message);
     const { response: fetchResponse } = error;

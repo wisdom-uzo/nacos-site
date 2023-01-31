@@ -33,15 +33,17 @@ const Register = () => {
 
       try {
     
-        const data = await axios.post('/api/auth/register', student);
+        const {data} = await axios.post('/api/auth/register', student);
         
-        res = data.statusText
+        res = data.submitted
+        console.log(data.submitted)
       
     } catch (error) { 
       console.log(error);    
     }
   
-    
+    console.log
+
 
       if(!res){
        return toast.error('Your detailes exits')
