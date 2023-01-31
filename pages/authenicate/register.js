@@ -40,28 +40,16 @@ const Register = () => {
     } catch (error) { 
       console.log(error);    
     }
-    console.log(res);
+  
+    
 
-      if(res){
-         toast.success('Your detailes has been added')
-         console.log('data in')
+      if(!res){
+       return toast.error('Your detailes exits')
          
-
-         setStudent({
-          firstName: '',
-          middleName:'',
-          lastName:'',
-          phoneNo: '',
-          email: '', 
-          matric_No: '',
-          level: ''
-         })
-         router.push('../')
-         
-      }else {
-        toast.error('Your detailes exits')
-         console.log('data out')
       }
+      toast.success('Your detailes has been added')
+    
+      router.push('../')
     }
 
 
