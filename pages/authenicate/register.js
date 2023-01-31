@@ -45,7 +45,7 @@ const Register = () => {
       if(res){
          toast.success('Your detailes has been added')
          console.log('data in')
-         return router.push('../')
+         
 
          setStudent({
           firstName: '',
@@ -56,6 +56,7 @@ const Register = () => {
           matric_No: '',
           level: ''
          })
+         router.push('../')
          
       }else {
         toast.error('Your detailes exits')
