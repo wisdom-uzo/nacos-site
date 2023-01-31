@@ -42,13 +42,9 @@ const Register = () => {
       console.log(error);    
     }
   
-    console.log
 
 
-      if(!res){
-       return toast.error('Your detailes exits')
-         
-      }
+   
       toast.success('Your detailes has been added')
     
       router.push('../')
