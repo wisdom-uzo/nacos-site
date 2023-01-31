@@ -49,11 +49,11 @@ const Register = () => {
        return toast.error('Your detailes exits')
          
       }else{
-
+toast.success('Your detailes has been added')
       }
-      toast.success('Your detailes has been added')
       
-    }
+      
+    
 
     
     }
