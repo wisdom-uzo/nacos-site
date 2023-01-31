@@ -45,12 +45,18 @@ const Register = () => {
 
 
    
-      if(!res){
-       return toast.error('Your detailes exits')
-         
-      }else{
-toast.success('Your detailes has been added')
-      }
+     
+     toast.success('Your detailes has been added')
+     
+    setStudent({
+      firstName: '',
+      middleName:'',
+      lastName:'',
+      phoneNo: '',
+      email: '', 
+      matric_No: '',
+      level: ''
+    })
       
       
     
