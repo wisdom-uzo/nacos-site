@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 
 
-const login = () => {
+const Login = () => {
 
     const [student, setStudent] = useState({
       email: '', 
@@ -77,4 +77,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login

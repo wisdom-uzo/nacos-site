@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { useRouter } from 'next/router'
 
 
-const register = () => {
+const Register = () => {
 
     const [student, setStudent] = useState({
       firstName: '',
@@ -161,4 +161,4 @@ const register = () => {
   )
 }
 
-export default register
+export default Register
