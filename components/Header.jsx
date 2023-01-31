@@ -4,7 +4,7 @@ import { Router, useRouter } from 'next/router'
 import React from 'react'
 import {FaHome,} from 'react-icons/fa'
 
-const header = ({user}) => {
+const Header = ({user}) => {
   const router = useRouter()
 
   const handleLogout = async () => {
@@ -31,4 +31,4 @@ const header = ({user}) => {
   )
 }
 
-export default header
+export default Header

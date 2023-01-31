@@ -15,7 +15,7 @@ const Index = ({students}) => {
    if(!students){
     router.push('/welcome') 
    }
-  }, [students])
+  }, [router, students])
   
   return (
     <div>
