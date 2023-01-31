@@ -47,7 +47,7 @@ const Register = () => {
    
       toast.success('Your detailes has been added')
     
-      router.push('../')
+      router.push('./')
     }
 
 
